@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Photo Library</h1>
+
+    <!-- Upload Section -->
+    <div class="upload-section">
+        <input type="file" id="imageInput" accept="image/*" multiple>
+        <button id="addPhotosButton">Add Photos</button>
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-section">
+        <input type="text" id="searchInput" placeholder="Search by title or tag">
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery-section">
+        <h2>Photo Gallery</h2>
+        <div id="gallery"></div>
+    </div>
+
+    <!-- Detail Section -->
+    <div class="detail-section" id="detailSection" style="display:none;">
+        <h2>Photo Details</h2>
+        <img id="detailImage" src="" alt="Selected Photo">
+        <div id="metadataOutput"></div>
+
+        <!-- Title Section -->
+        <div class="title-section">
+            <h3>Edit Title:</h3>
+            <input type="text" id="titleInput" placeholder="Enter a title for the photo">
+            <button id="saveTitleButton">Save</button>
+            <button id="editTitleButton">Edit Title</button>
+        </div>
+
+        <!-- Pre-selected Tags Section -->
+        <div class="pre-selected-tag-section">
+            <h3>Add Pre-selected Tags:</h3>
+            <button class="pre-tag-button" data-tag="ACCD">ACCD</button>
+            <button class="pre-tag-button" data-tag="EOP">EOP</button>
+            <button class="pre-tag-button" data-tag="LCA">LCA</button>
+            <button class="pre-tag-button" data-tag="Case Study">Case Study</button>
+        </div>
+
+        <!-- Custom Tags Section -->
+        <div class="manual-tag-section">
+            <h3>Add Custom Tags:</h3>
+            <input type="text" id="manualTagInput" placeholder="Enter a custom tag">
+            <button id="addTagButton">Add Tag</button>
+            <div id="manualTagsOutput"></div>
+        </div>
+
+        <button id="deletePhotoButton" style="margin-top: 20px;">Delete Photo</button>
+    </div>
+
+    <!-- Include the necessary JS files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.js"></script>
+    <script src="photoLibrary.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #eee;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Upload Section */
+.upload-section {
+    margin-bottom: 30px;
+}
+
+.upload-section input[type="file"],
+.upload-section button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #444;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin: 5px;
+}
+
+.upload-section button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.upload-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: 20px;
+}
+
+.search-section input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Gallery Section */
+.gallery-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery-section #gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo-thumbnail {
+    margin: 10px;
+    border: 3px solid #444;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.photo-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.photo-thumbnail img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.photo-title {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Detail Section */
+.detail-section {
+    text-align: center;
+    margin-top: 30px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.detail-section img {
+    width: 50vw; /* Set the width to 50% of the viewport width */
+    height: auto; /* Maintain aspect ratio */
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.title-section {
+    margin-bottom: 20px;
+}
+
+.title-section input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    border: 2px solid #444;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+.title-section button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.title-section button:disabled {
+    background-color: #666; /* Gray out the button when disabled */
+    cursor: not-allowed;
+}
+
+.title-section input[type="text"]:disabled {
+    background-color: #555; /* Gray out the input field when disabled */
+    color: #bbb; /* Change text color for better contrast when disabled */
+}
+
+.title-section button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Manual Tag Section */
+.manual-tag-section {
+    margin-top: 20px;
+}
+
+.manual-tag-section input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+    width: 60%;
+    margin-right: 10px;
+    border: 2px solid #444;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+.manual-tag-section button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.manual-tag-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Labels (for tags and metadata) */
+.label {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .upload-section input[type="file"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .label {
+        font-size: 12px;
+        padding: 8px 12px;
+        margin: 4px;
+    }
+
+    .manual-tag-section input[type="text"],
+    .title-section input[type="text"] {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .manual-tag-section button,
+    .title-section button {
+        width: 100%;
+    }
+
+.label {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+}
+
+.label span {
+    font-weight: normal;
+    font-size: 12px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/* Style for the photo titles below thumbnails */
+.photo-title {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Disabled button styling */
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+
+/* Style for the thumbnail container */
+.photo-thumbnail {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures the "X" button stays within the bounds of the thumbnail */
+}
+
+/* Style for the photo titles below thumbnails */
+.photo-title {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Style for the delete button */
+.delete-photo {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    padding: 2px 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 10; /* Ensures the "X" button appears above the image */
+}
+
+/* Style for the image inside the thumbnail */
+.photo-thumbnail img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
